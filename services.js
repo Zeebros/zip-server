@@ -183,7 +183,7 @@ async function extractArchive(filepath) {
 		const outputDir = `./public/uploads/extracted/`;
 		zip.extractAllTo(outputDir);
 		// delete the zip file
-		// fs.unlinkSync(filepath);
+		fs.unlinkSync(filepath);
 
 		console.log(`Extracted to "${outputDir}" successfully`);
 		return true;
@@ -211,7 +211,8 @@ function importEntry(res) {
 
 			var config = {
 				method: 'post',
-				url: 'https://api.contentstack.io/v3/content_types/test_impot/entries/' + eUid + '/import?locale=' + eLocale,
+				// url: 'https://api.contentstack.io/v3/content_types/test_impot/entries/' + eUid + '/import?locale=' + eLocale,
+				url: 'https://api.contentstack.io/v3/content_types/web_tiles/entries/' + eUid + '/import?locale=' + eLocale,
 				headers: {
 					'api_key': 'blt25772735bdf27ede',
 					'authorization': 'cs775bb62b020eb66c78580ea6',
@@ -222,9 +223,6 @@ function importEntry(res) {
 
 			axios(config)
 				.then(function (response) {
-					// cleanUploadAndExtracted();
-					// res.status(200).send(response.data);
-
 					console.log(JSON.stringify(response.data));
 					fs.unlinkSync(dir + jsonfile);
 				})
@@ -236,30 +234,6 @@ function importEntry(res) {
 	} catch (error) {
 		throw new Error(error);
 	}
-}
-
-function cleanUploadAndExtracted() {
-	var extractedDir = "./public/uploads/extracted";
-	fs.readdir(extractedDir, (err, files) => {
-		if (err) throw err;
-
-		for (const file of files) {
-			fs.unlink(path.join(extractedDir, file), (err) => {
-				if (err) throw err;
-			});
-		}
-	});
-
-	var uploadDir = "./public/uploads";
-	fs.readdir(uploadDir, (err, files) => {
-		if (err) throw err;
-
-		for (const file of files) {
-			fs.unlink(path.join(uploadDir, file), (err) => {
-				if (err) throw err;
-			});
-		}
-	});
 }
 
 module.exports = { getentry, fromDir, importEntry };
