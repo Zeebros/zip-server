@@ -117,8 +117,8 @@ function zipEntry() {
 		for (const file of files) {
 			//console.log(file);
 			//console.log(outputDir + file);
-			// const zipfile = file.replace(".json", "") + ".zip";
-			const zipfile = "download.zip";
+			const zipfile = file.replace(".json", "") + ".zip";
+			// const zipfile = "download.zip";
 
 			zipLocal.sync
 				.zip("./public/copies")
