@@ -1,0 +1,48 @@
+{
+    "_version": 1,
+    "locale": "fr-fr",
+    "uid": "blt02a3369e166d8a12",
+    "ACL": {},
+    "_in_progress": false,
+    "body_text": "Thank you for choosing CR-WK for your marketing needs.",
+    "created_at": "2022-09-01T15:28:28.635Z",
+    "created_by": "cs059eecc8b69f88fe",
+    "cta": {
+        "title": "View Account",
+        "href": "www.cr-wk.com"
+    },
+    "headline": "Welcome",
+    "tags": [],
+    "tile_image": {
+        "uid": "blt63f6eb4a4b618f00",
+        "created_by": "cs059eecc8b69f88fe",
+        "updated_by": "cs059eecc8b69f88fe",
+        "created_at": "2022-09-01T15:28:22.401Z",
+        "updated_at": "2022-09-01T15:28:22.401Z",
+        "content_type": "image/webp",
+        "file_size": "371478",
+        "filename": "alice-donovan-rouse-yu68fUQDvOI-unsplash-_1_.webp",
+        "title": "alice-donovan-rouse-yu68fUQDvOI-unsplash-_1_.webp",
+        "ACL": {},
+        "_version": 1,
+        "parent_uid": null,
+        "is_dir": false,
+        "tags": [],
+        "publish_details": {
+            "environment": "blt146c1f5d6e02e265",
+            "locale": "en-us",
+            "time": "2022-09-01T15:28:37.085Z",
+            "user": "cs059eecc8b69f88fe"
+        },
+        "url": "https://images.contentstack.io/v3/assets/blt25772735bdf27ede/blt63f6eb4a4b618f00/6310cf96b5284f56ca59cf2c/alice-donovan-rouse-yu68fUQDvOI-unsplash-_1_.webp"
+    },
+    "title": "Welcome Tile",
+    "updated_at": "2022-09-01T15:28:28.635Z",
+    "updated_by": "cs059eecc8b69f88fe",
+    "publish_details": {
+        "environment": "blt146c1f5d6e02e265",
+        "locale": "en-us",
+        "time": "2022-09-01T15:28:37.109Z",
+        "user": "cs059eecc8b69f88fe"
+    }
+}

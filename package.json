@@ -1,0 +1,35 @@
+{
+  "name": "react_file_upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@contentstack/management": "^1.5.0",
+    "adm-zip": "^0.5.9",
+    "body-parser": "^1.20.0",
+    "call-bind": "^1.0.2",
+    "ciql-json": "^1.9.6",
+    "contentstack": "^3.15.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "fs": "^0.0.1-security",
+    "react-native-fs": "^2.20.0",
+    "zip-local": "^0.3.5"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
