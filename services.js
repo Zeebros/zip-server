@@ -120,6 +120,11 @@ function zipEntry() {
 			const zipfile = file.replace(".json", "") + ".zip";
 			// const zipfile = "download.zip";
 
+			//check if the zip directory has already a file by the same name
+			if (fs.existsSync(outputDir + '/' + zipfile)) {
+				fs.unlinkSync(outputDir + '/' + zipfile);
+			}
+
 			zipLocal.sync
 				.zip("./public/copies")
 				.compress()
